@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
   python3-pip \
   python3-nose \
   python3-numpy \
-  python3-scipy
+  python3-scipy \
+  cython3
 
 # Set CUDA_ROOT
 ENV CUDA_ROOT /usr/local/cuda/bin

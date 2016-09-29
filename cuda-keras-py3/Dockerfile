@@ -10,7 +10,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libhdf5-dev
 RUN pip3 install --upgrade six \
      h5py \
      pyaml \
-     keras
+
+# Clone Keras repo and move into it
+RUN cd /root && git clone https://github.com/fchollet/keras.git && cd keras && \
+  # Install
+  python setup.py install
 
 # Set ~/keras as working directory
 WORKDIR /root/keras
