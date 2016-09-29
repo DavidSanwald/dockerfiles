@@ -4,12 +4,12 @@ MAINTAINER David Sanwald <why.ever.not.berlin@gmail.com>
 RUN apt-get update && apt-get install -y \
   git \
   wget \
-  libopenblas-dev 
+  libopenblas-dev
 
 RUN conda install -y \
     numpy \
     scipy \
-    pyaml \
+    pyyaml \
     h5py
 
 ENV CUDA_ROOT /usr/local/cuda/bin
