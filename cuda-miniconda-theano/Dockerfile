@@ -1,4 +1,4 @@
-FROM ilikefoxes/cuda-miniconda-theano
+FROM ilikefoxes/cuda-miniconda
 MAINTAINER David Sanwald <why.ever.not.berlin@gmail.com>
 
 RUN apt-get update && apt-get install -y \
