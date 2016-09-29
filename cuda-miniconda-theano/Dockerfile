@@ -12,6 +12,8 @@ RUN conda install -y \
     pyyaml \
     h5py
 
+RUN conda clean -a -y
+
 ENV CUDA_ROOT /usr/local/cuda/bin
 # Install bleeding-edge Theano
 RUN pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
