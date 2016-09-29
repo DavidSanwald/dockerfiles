@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
   python3-pip \
   python3-nose \
   python3-numpy \
-  cython3 \
+  cython3 
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python3-scipy
 
