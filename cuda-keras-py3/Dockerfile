@@ -3,13 +3,13 @@ FROM ilikefoxes/cuda-theano-py3:latest
 MAINTAINER David Sanwald <why.ever.not.berlin@gmail.com.com>
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
-  libhdf5-dev \
-  python-h5py \
-  python-yaml
+RUN apt-get update && apt-get install -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libhdf5-dev 
 
 # Upgrade six
-RUN pip3 install --upgrade six
+RUN pip3 install --upgrade six \
+     h5py \
+     pyaml
 
 # Clone Keras repo and move into it
 RUN cd /root && git clone https://github.com/fchollet/keras.git && cd keras && \
